@@ -7,6 +7,12 @@ dotenv.config({ path: './config/config.env' });
 
 //make app
 const app = express();
+
+//create route
+app.get('/', (req, res) => {
+  res.send('Hello from express');
+});
+
 //set PORT to port from config.env or else set to 5000
 const PORT = process.env.PORT || 5000;
 
